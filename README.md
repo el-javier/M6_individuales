@@ -19,5 +19,3 @@ esta incluye menu de navegacion, carrusel, y nuevas imagenes
 
 La nueva página de usuarios debe tener componentes de CSS, principalmente color de fondo y color
 de la letra.
-
-navbar y footer esta en desarrollo
