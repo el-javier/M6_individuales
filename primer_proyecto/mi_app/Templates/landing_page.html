@@ -1,72 +1,101 @@
-<!DOCTYPE html>
+{% extends 'base.html'%}
+{% load static %}
+
+<!doctype html>
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing page</title>
-    <style>
-        #imagen {
-            float: left;
-            width: 60%;
-            text-align: center;
-        }
-
-        #formulario-beneficios {
-            float: right;
-            width: 40%;
-        }
-
-        header,
-        footer {
-            clear: both;
-            text-align: center;
-        }
-    </style>
+  <head>
+    {%block title%}<title>Landing Page</title>{%endblock%}
 </head>
-
 <body>
-    <header>
-        <h1>Nuestro Producto Estrella</h1>
-        <h2>Regístrate dentro de los 100 primeros
-            y recibirás un descuento</h2>
-    </header>
-    <section id="imagen">
-        <img src="https://www.cfg.com/images/cfg1a_new.gif" height="250px">
-        <p>Image copyrights to https://www.cfg.com/</p>
-    </section>
-    <section id="formulario-beneficios">
-        <form>
-            <p>Nombre</p>
-            <input type="text">
-            <p>Email</p>
-            <input type="email" />
-            <br>
-            <br>
-            <button type="submit">Regístrate</button>
-        </form>
-        <br>
-        <h3>¡Nuestros Beneficios!</h3>
-        <ul>
-            <li>Rapidez</li>
-            <li>Seguridad</li>
-            <li>Gran Precio</li>
-            <li>Flexibilidad</li>
-        </ul>
-    </section>
-    <footer>
-        <br>
-        <p>
-            <a href="">Like Red Social 1</a> |
-            <a href="">Like Red Social 2</a> |
-            <a href="">Like Red Social 3</a> |
-            <a href="">Like Red Social 4</a>
-        </p>
-        <br>
-        <p>Copyright &copy; 2019-2020 -
-            Desarrollos de Landing Pages Inc.</p>
-    </footer>
-</body>
+<main>
+{% block content %}
+  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://picsum.photos/2000/500" alt="Imagen externa">
+        <div class="container">
+          <div class="carousel-caption text-start">
+            <h1>Individual 3</h1>
+            <p>+</p>
+            <p><a class="btn btn-lg btn-primary" href="#">+</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://picsum.photos/2000/501" alt="Imagen externa">
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>Modulo 6</h1>
+            <p>+</p>
+            <p><a class="btn btn-lg btn-primary" href="#">+</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://picsum.photos/2000/502" alt="Imagen externa">
+        <div class="container">
+          <div class="carousel-caption text-end">
+            <h1>Python Django</h1>
+            <p>+</p>
+            <p><a class="btn btn-lg btn-primary" href="#">+</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
 
+
+  <!-- Marketing messaging and featurettes
+  ================================================== -->
+  <!-- Wrap the rest of the page in another container to center all the content. -->
+
+  <div class="container marketing">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">Una <span class="text-muted">Imagen</span></h2>
+        <p class="lead">+</p>
+      </div>
+      <div class="col-md-5">
+        <img src="{% static 'img/886-500x500.jpg' %}" alt="imagen" class="imagen-top">
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading">La otra <span class="text-muted">Imagen</span></h2>
+        <p class="lead">+</p>
+      </div>
+      <div class="col-md-5 order-md-1">
+        <img src="{% static 'img/643-500x500.jpg' %}" alt="imagen" class="imagen-top">
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <!-- /END THE FEATURETTES -->
+
+  </div><!-- /.container -->
+
+
+
+
+{% endblock %}
+</main>
+  </body>
 </html>
