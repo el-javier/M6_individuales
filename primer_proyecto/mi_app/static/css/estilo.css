@@ -12,3 +12,13 @@
   }
 } */
 
+
+.m-usuario {
+  padding: 10%;
+  background-color: azure;
+}
+
+.celda1 {
+  color: rgb(69, 124, 138) !important;
+  font-size: 30px !important;
+}
