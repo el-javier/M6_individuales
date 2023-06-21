@@ -2,4 +2,4 @@
 ejercicios individuales modulo 6 
 
 
-Ejercico 4 nodulo 6 en proceso 
+Ejercicio 4 nodulo 6 en proceso 
