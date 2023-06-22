@@ -6,5 +6,6 @@ Ejercicio 4 nodulo 6 en proceso
 
 superadmin para prueba 
 
-usuario admin
+usuario: admin
+
 contrasena : prueba.123
