@@ -19,6 +19,6 @@ Restricciones : solo un usuario logeado puede ingresar a la pagina 'restringido'
 
 Si el usuario no esta logeado e intenta ingresar a 'restringido' se le redireccionara a 'login' usando LOGIN_URL = 'login' en el settings.py
 
-al dar logout se redirecciona al inicio , usando LOGOUT_REDIRECT_URL = 'landing' n el settings.py
+al dar logout se redirecciona al inicio , usando LOGOUT_REDIRECT_URL = 'landing' en el settings.py
 
 
