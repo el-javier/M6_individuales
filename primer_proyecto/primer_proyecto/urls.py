@@ -17,7 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.contrib.auth import views as auth_views
 from django.urls import path
-from mi_app.views import landing, usuarios, registro_usuario
+from mi_app.views import landing, usuarios, registro_usuario, login_view, logout_view, restringido
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -25,4 +25,6 @@ urlpatterns = [
     path('usuarios/', usuarios, name='usuarios'),
     path('registro/', registro_usuario, name='registro_usuario'),
     path('logout/', auth_views.LogoutView.as_view(), name='logout'),
+    path('login/', login_view, name='login'),
+    path('restringido/', restringido, name='restringido'),
 ]

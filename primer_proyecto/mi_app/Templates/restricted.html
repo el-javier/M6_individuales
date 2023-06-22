@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+
+<h1>Restringido</h1>
+
+{% block content %}
+  <div class="container col-xl-10 col-xxl-8 px-4 py-5">
+    <div class="row align-items-center g-lg-5 py-5">
+        <div class="col-lg-5">
+            <div class="text-center text-lg-start">
+                <h1 class="display-4 fw-bold lh-1 text-body-emphasis mb-3">Restringido</h1>
+                <h2 class="col-lg-10 fs-4">ud esta logeado por eso puede ver esta pagina</h2>
+                <img src="{% static 'img/logo-js.png' %}" width="200"alt="Logo" class="logo">
+            </div>
+        </div>
+        <div class="col-md-10 mx-auto col-lg-7">
+            <form action="{% url 'logout' %}" method="post">
+                {% csrf_token %}
+                <button type="submit">Cerrar sesión</button>
+              </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
