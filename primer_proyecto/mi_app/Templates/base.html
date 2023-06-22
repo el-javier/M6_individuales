@@ -1,5 +1,7 @@
 {% load static %}
 
+<!DOCTYPE html>
+<html lang="es">
   <!-- head -->
   
 <head>
@@ -21,22 +23,32 @@
   <header>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Landing Page</a>
+        <a class="navbar-brand" href="#">Logo</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <ul class="navbar-nav me-auto mb-2 mb-md-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+              <a class="nav-link {% block active1 %}{% endblock %}" aria-current="page" href="{% url 'landing' %}">Inicio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Usuarios</a>
+              <a class="nav-link {% block active2 %}{% endblock %}" href="{% url 'usuarios' %}">Usuarios</a>
             </li>
-            {% comment %} <li class="nav-item">
-              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-            </li> {% endcomment %}
+            <li class="nav-item">
+              <a class="nav-link {% block active3 %}{% endblock %}" href="{% url 'registro_usuario' %}">Registro de Usuario</a>
+            </li>
           </ul>
+          {% if user.is_authenticated %}
+            <p>Bienvenido, {{ user.username }}</p>
+            <form action="{% url 'logout' %}" method="post">
+              {% csrf_token %}
+              <button type="submit">Cerrar sesión</button>
+            </form>
+          {% else %}
+            <p>Inicia sesión</p>
+          {% endif %}
+
         </div>
       </div>
     </nav>

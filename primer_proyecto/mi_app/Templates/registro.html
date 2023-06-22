@@ -1,0 +1,29 @@
+{% extends 'base.html'%}
+{% load static %}
+
+{%block title%}<title>Registro</title>{%endblock%}
+{% block active3 %}active{% endblock %}
+
+{% block content %}
+    <div class="container col-xl-10 col-xxl-8 px-4 py-5">
+        <div class="row align-items-center g-lg-5 py-5">
+            <div class="col-lg-5">
+                <div class="text-center text-lg-start">
+                    <h1 class="display-4 fw-bold lh-1 text-body-emphasis mb-3">Registro de usuario</h1>
+                    <h2 class="col-lg-10 fs-4">registrate en el formulario</h2>
+                    <img src="{% static 'img/logo-js.png' %}" width="200"alt="Logo" class="logo">
+                </div>
+            </div>
+            <div class="col-md-10 mx-auto col-lg-7">
+                <form action="" method="post">
+                    {% csrf_token %}
+                    <table>
+                        {{ form.as_table }}
+                    </table>
+                    <input type="reset" value="limpiar">
+                    <button type="submit">Registrarse</button>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
