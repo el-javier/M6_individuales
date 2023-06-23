@@ -2,7 +2,7 @@
 ejercicios individuales modulo 6 
 
 
-Ejercicio 6 nodulo 6 en proceso 
+Ejercicio 6 nodulo 6
 
 Identificar grupos de usuarios
 
