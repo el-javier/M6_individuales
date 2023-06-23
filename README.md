@@ -11,14 +11,14 @@ usuario: admin
 pass : prueba.123
 grupo administradores
 
-los administradores tienen todo os permisos pueden agregar, cambiar, borrar y ver 
+los administradores tienen todo los permisos pueden agregar, cambiar, borrar y ver 
 tienen total control
 ----
 usuario: Jose
 pass: jose.123
 grupo : usuarios
 
-los usuarios no tienen pemisos de edcion solo pueden ver , ya que son simples visitantes y su importancia recau en l recoleccion de sus datos 
+los usuarios no tienen pemisos de edicion solo pueden ver , ya que son simples visitantes y su importancia recau en l recoleccion de sus datos 
 ----
 
 usuario: Alejandra
@@ -35,6 +35,8 @@ usuarios : listado de usarios creados
 Registro de usuarios : formulario de registro de usuario simple 
 registro usuario y grupo : formulario de registro que solo es visible para los asignados en el grpo "Administradores"
 acceso restringido : pagina visible solo para usuarios logeados , si no esta logeado lo deriva a login
+
+y en el extremo derecho un saludo de login y opcion de logout y volver a iniciar sesion.
 
 
 
