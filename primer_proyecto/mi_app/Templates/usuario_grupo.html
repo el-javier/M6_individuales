@@ -1,0 +1,45 @@
+{% extends 'base.html'%}
+{% load static %}
+
+
+{%block title%}<title>Registro</title>{%endblock%}
+{% block active4 %}active{% endblock %}
+
+{% block content %}
+    <div class="container col-xl-10 col-xxl-8 px-4 py-5">
+        <div class="row align-items-center g-lg-5 py-5">
+            <div class="col-lg-5">
+                <div class="text-center text-lg-start">
+                    <h1 class="display-4 fw-bold lh-1 text-body-emphasis mb-3">Registro de usuarios y grupos</h1>
+                    <img src="{% static 'img/logo-js.png' %}" width="200"alt="Logo" class="logo">
+                </div>
+            </div>
+            <div class="col-md-10 mx-auto col-lg-7">
+                <div>
+                    <h2>Bienvenido</h2>
+
+                    {% if request.user.is_staff or Administradores %}
+                    <p>Puedes crear usuarios y asignarles un grupo. Pueden ser : 
+                        <ul>
+                            <li>Usuarios : sin privilegios </li>
+                            <li>empleados : con algunos privilegios </li>
+                            <li>Administradores : con todos los privilegios </li>
+                        </ul>
+                    </p>
+                    <form action="" method="post">
+                        {% csrf_token %}
+                        <table>
+                            {{ form.as_table }}
+                        </table>
+                        <input type="reset" value="Limpiar">
+                        <button type="submit">Registrarse</button>
+                    </form>
+                    {% else %}
+                    <p>Solo los administradores pueden crear usuarios y asignarles un grupo. </p>
+                    {% endif %}
+                </div>
+                
+            </div>
+        </div>
+    </div>
+{% endblock %}

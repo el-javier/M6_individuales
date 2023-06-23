@@ -17,13 +17,14 @@ Including another URLconf
 from django.contrib import admin
 from django.contrib.auth import views as auth_views
 from django.urls import path
-from mi_app.views import landing, usuarios, registro_usuario, login_view, logout_view, restringido
+from mi_app.views import landing, usuarios, registro_usuario, login_view, logout_view, restringido, usuario_grupo
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', landing, name='landing'),
     path('usuarios/', usuarios, name='usuarios'),
     path('registro/', registro_usuario, name='registro_usuario'),
+    path('usuario_grupo/', usuario_grupo, name='usuario_grupo'),
     path('logout/', auth_views.LogoutView.as_view(), name='logout'),
     path('login/', login_view, name='login'),
     path('restringido/', restringido, name='restringido'),

@@ -39,17 +39,20 @@
               <a class="nav-link {% block active3 %}{% endblock %}" href="{% url 'registro_usuario' %}">Registro de Usuario</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link {% block active4 %}{% endblock %}" href="{% url 'restringido' %}">acceso restringido</a>
+              <a class="nav-link {% block active4 %}{% endblock %}" href="{% url 'usuario_grupo' %}">Registro Usuario y Grupos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {% block active5 %}{% endblock %}" href="{% url 'restringido' %}">acceso restringido</a>
             </li>
           </ul>
           {% if user.is_authenticated %}
-            <p>Bienvenido, {{ user.username }}</p>
+            <h3 style="color:white">Bienvenido, {{ user.username }} - </h3>
             <form action="{% url 'logout' %}" method="post">
               {% csrf_token %}
               <button type="submit">Cerrar sesión</button>
             </form>
           {% else %}
-            <p><a class="nav-link {% block active5 %}{% endblock %}" href="{% url 'login' %}">Iniciar sesion</a></p>
+            <h3><a style="color:red" class="nav-link" href="{% url 'login' %}">Iniciar sesion</a></h3>
           {% endif %}
 
         </div>
