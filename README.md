@@ -32,8 +32,8 @@ El nav del sitio contiene las paginas
 
 inicio : te lleva a la landing o home
 usuarios : listado de usarios creados
-Registro de usuarios : formulario de registro de usuario simple 
-registro usuario y grupo : formulario de registro que solo es visible para los asignados en el grpo "Administradores"
+Registro de usuarios : formulario de registro de usuario simple, en este formario quienes se registran quedan asigando al grupo "usuarios"
+registro usuario y grupo : formulario de registro que solo es visible para los asignados en el grupo "Administradores" , los cuales pueden crear usuarios y designar si son "administradores" "empleados" o "usuarios"
 acceso restringido : pagina visible solo para usuarios logeados , si no esta logeado lo deriva a login
 
 y en el extremo derecho un saludo de login y opcion de logout y volver a iniciar sesion.
