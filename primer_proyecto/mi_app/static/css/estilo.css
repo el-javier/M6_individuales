@@ -22,3 +22,24 @@
   color: rgb(69, 124, 138) !important;
   font-size: 30px !important;
 }
+
+.logo img{
+  width: 100px;
+}
+
+.bg-gradi{
+  background: linear-gradient(0deg, rgb(45, 48, 56) 0%, rgb(27, 27, 27) 100%);
+}
+
+.saludo__usuario{
+  padding-right: 20px;
+  font-size: medium;
+}
+
+footer {
+  padding: 5vw;
+  display: flex;
+  align-items: center;
+}
+
+

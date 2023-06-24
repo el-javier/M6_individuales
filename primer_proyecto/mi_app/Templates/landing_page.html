@@ -10,7 +10,7 @@
 <body>
 <main>
 {% block content %}
-  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+  <div id="myCarousel" class="carousel slide bg-black" data-bs-ride="carousel">
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
       <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -21,9 +21,9 @@
         <img src="https://picsum.photos/2000/500" alt="Imagen externa">
         <div class="container">
           <div class="carousel-caption text-start">
-            <h1>Individual 3</h1>
-            <p>+</p>
-            <p><a class="btn btn-lg btn-primary" href="#">+</a></p>
+            <h1>Sprint 6 Modulo6</h1>
+            <p>Se creo una lista de usuarios dinamica</p>
+            <p><a class="btn btn-lg btn-primary" href="{% url 'usuarios' %}">Ver Usuarios</a></p>
           </div>
         </div>
       </div>
@@ -31,9 +31,9 @@
         <img src="https://picsum.photos/2000/501" alt="Imagen externa">
         <div class="container">
           <div class="carousel-caption">
-            <h1>Modulo 6</h1>
-            <p>+</p>
-            <p><a class="btn btn-lg btn-primary" href="#">+</a></p>
+            <h1>Registro</h1>
+            <p>Tambien un registro de usuarios normal</p>
+            <p><a class="btn btn-lg btn-primary" href="{% url 'registro_usuario' %}">registrar un usuario</a></p>
           </div>
         </div>
       </div>
@@ -41,9 +41,9 @@
         <img src="https://picsum.photos/2000/502" alt="Imagen externa">
         <div class="container">
           <div class="carousel-caption text-end">
-            <h1>Python Django</h1>
-            <p>+</p>
-            <p><a class="btn btn-lg btn-primary" href="#">+</a></p>
+            <h1>Registro solo si eres admin</h1>
+            <p>y un formulario de registro de usuario asignandole un grupo con provilegios diferenciados</p>
+            <p><a class="btn btn-lg btn-primary" href="{% url 'usuario_grupo' %}">Registar usuario y grupo</a></p>
           </div>
         </div>
       </div>
@@ -59,42 +59,24 @@
   </div>
 
 
-  <!-- Marketing messaging and featurettes
-  ================================================== -->
-  <!-- Wrap the rest of the page in another container to center all the content. -->
+  <!-- contenido -->
 
-  <div class="container marketing">
-
-    <div class="row featurette">
-      <div class="col-md-7">
-        <h2 class="featurette-heading">Una <span class="text-muted">Imagen</span></h2>
-        <p class="lead">+</p>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <h2 class="featurette-heading">Agregamos imagenes</span></h2>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto sunt magnam cumque laborum obcaecati quia, atque quos consectetur repudiandae dolor quasi tenetur, aut perferendis saepe dolorem incidunt voluptates earum cum?
       </div>
-      <div class="col-md-5">
-        <img src="{% static 'img/886-500x500.jpg' %}" alt="imagen" class="imagen-top">
+      <div class="col-sm">
+        <img src="{% static 'img/886-500x500.jpg' %}" alt="imagen" class="imagen-top rounded">
       </div>
-    </div>
-
-    <hr class="featurette-divider">
-
-    <div class="row featurette">
-      <div class="col-md-7 order-md-2">
-        <h2 class="featurette-heading">La otra <span class="text-muted">Imagen</span></h2>
-        <p class="lead">+</p>
-      </div>
-      <div class="col-md-5 order-md-1">
-        <img src="{% static 'img/643-500x500.jpg' %}" alt="imagen" class="imagen-top">
+      <div class="col-sm">
+        <img src="{% static 'img/643-500x500.jpg' %}" alt="imagen" class="imagen-top rounded">
       </div>
     </div>
+  </div>
 
-    <hr class="featurette-divider">
-
-    <!-- /END THE FEATURETTES -->
-
-  </div><!-- /.container -->
-
-
-
+  <hr class="featurette-divider">
 
 {% endblock %}
 </main>
