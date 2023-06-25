@@ -4,12 +4,6 @@ ejercicios individuales modulo 6
 
 Ejercicio 5 nodulo 6 en proceso 
 
-superadmin para prueba 
-
-usuario: admin
-
-contrasena : prueba.123
-
 Se creo una pagina login.html
 
 LOGIN : Al ingresar con usuario y contrasena , se da una bienvenida en el nav ( arriba a la derecha ) que incluye mensaje, nombre de usuario y boton de logout 
